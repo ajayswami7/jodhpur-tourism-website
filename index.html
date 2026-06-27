@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jodhpur – The Blue City</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600&family=Rajdhani:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav id="navbar">
+    <div class="nav-logo" onclick="navigateTo('home')">
+      <span>Jodhpur</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" data-page="home" class="nav-link active">Home</a></li>
+      <li><a href="#" data-page="places" class="nav-link">Places</a></li>
+      <li><a href="#" data-page="historical" class="nav-link">History</a></li>
+      <li>
+        <a href="#" data-page="restaurants" class="nav-link">Restaurants</a>
+      </li>
+      <li><a href="#" data-page="hotels" class="nav-link">Hotels</a></li>
+      <li><a href="#" data-page="culture" class="nav-link">Culture</a></li>
+      <li><a href="#" data-page="travel" class="nav-link">Travel Tips</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">☰</button>
+  </nav>
+
+  <div id="app">
+    <div class="page active" id="page-home">
+      <section class="hero" style="background-image: url(&quot;images/bg.jpg&quot;)">
+        <div class="hero-overlay"></div>
+        <div class="hero-sky-tint"></div>
+        <div class="hero-content">
+          <p class="hero-eyebrow">Rajasthan, India</p>
+          <h1 class="hero-title">
+            <span class="word">The</span>
+            <span class="word blue-word">Blue</span>
+            <span class="word">City</span>
+          </h1>
+          <p class="hero-subtitle">
+            Where desert winds carry ancient stories and indigo walls glow
+            under golden sunsets
+          </p>
+          <div class="hero-cta-row">
+            <button class="btn-primary" onclick="navigateTo('places')">
+              Explore Now
+            </button>
+            <button class="btn-ghost" onclick="navigateTo('historical')">
+              Our History
+            </button>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-dot"></div>
+          <span>Scroll</span>
+        </div>
+      </section>
+
+      <div class="photo-strip">
+        <div class="ps-item" style="background-image: url(&quot;images/umaid bhawan.jpg&quot;)"></div>
+        <div class="ps-item" style="background-image: url(&quot;images/rao.jpg&quot;)"></div>
+        <div class="ps-item" style="background-image: url(&quot;images/KaylanaLake.jpg&quot;)"></div>
+        <div class="ps-item" style="background-image: url(&quot;images/clock tower.jpg&quot;)"></div>
+        <div class="ps-item" style="background-image: url(&quot;images/jaswant thada.jpg&quot;)"></div>
+      </div>
+
+      <section class="stats-section">
+        <div class="stat-card">
+          <span class="stat-num" id="s1">0</span><span class="stat-unit">+</span>
+          <p>UNESCO Heritage Sites</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" id="s2">0</span>
+          <p>Year Jodhpur Founded</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" id="s3">0</span><span class="stat-unit">M+</span>
+          <p>Visitors Every Year</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" id="s4">0</span><span class="stat-unit">m</span>
+          <p>Mehrangarh Altitude</p>
+        </div>
+      </section>
+
+      <section class="quick-section">
+        <h2 class="section-title">Discover Jodhpur</h2>
+        <p class="section-sub">
+          The Sun City awaits — ancient forts, azure streets, and royal
+          flavours
+        </p>
+        <div class="quick-grid">
+          <div class="quick-card" onclick="navigateTo('places')">
+            <div class="qcard-img" style="
+                  background-image: url(&quot;images/mandore garden.jpg&quot;);
+                "></div>
+            <div class="qcard-body">
+              <h3>Visiting Places</h3>
+              <p>Majestic forts, serene lakes,<br> and vibrant bazaars</p>
+              <span class="qcard-arrow">→</span>
+            </div>
+          </div>
+          <div class="quick-card" onclick="navigateTo('historical')">
+            <div class="qcard-img" style="
+                  background-image: url(&quot;images/mehrangarh fort.jpg&quot;);
+                "></div>
+            <div class="qcard-body">
+              <h3>Historical Places</h3>
+              <p>Centuries of Rajput glory <br> and Marwari heritage</p>
+              <span class="qcard-arrow">→</span>
+            </div>
+          </div>
+          <div class="quick-card" onclick="navigateTo('restaurants')">
+            <div class="qcard-img" style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=700&q=80&quot;);
+                "></div>
+            <div class="qcard-body">
+              <h3>Restaurants</h3>
+              <p>
+                Dal Baati Churma, Mirchi <br> Bada, and Rajasthani cuisine
+              </p>
+              <span class="qcard-arrow">→</span>
+            </div>
+          </div>
+          <div class="quick-card" onclick="navigateTo('hotels')">
+            <div class="qcard-img" style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=700&q=80&quot;);
+                "></div>
+            <div class="qcard-body">
+              <h3>Hotels</h3>
+              <p>
+                Heritage havelis to luxury palace hotels with desert views
+              </p>
+              <span class="qcard-arrow">→</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-banner" style="background-image: url(&quot;images/fort sunset.jpg&quot;)">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+          <span class="banner-tag">Must Experience</span>
+          <h2>Mehrangarh Fort at Sunset</h2>
+          <p>
+            Watch the city turn indigo as the sun sinks behind the ancient
+            ramparts of one of India's largest forts
+          </p>
+          <button class="btn-primary" onclick="navigateTo('historical')">
+            Explore the Fort
+          </button>
+        </div>
+      </section>
+
+      <section class="gallery-section">
+        <h2 class="section-title">Glimpses of the Blue City</h2>
+        <div class="gallery-mosaic">
+          <div class="gm-tall" style="background-image: url(&quot;images/bluelane.webp&quot;)">
+            <span>Blue Lanes</span>
+          </div>
+          <div class="gm-wide" style="
+                background-image: url(&quot;images/mehrangarh fort.jpg&quot;);
+              ">
+            <span>Mehrangarh Fort</span>
+          </div>
+          <div class="gm-sq" style="
+                background-image: url(&quot;images/jaswant thada.jpg&quot;);
+              ">
+            <span>Jaswant Thada</span>
+          </div>
+          <div class="gm-sq" style="background-image: url(&quot;images/rjcl.jpg&quot;)">
+            <span>Rajasthani Colours</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="climate-section">
+        <h2 class="section-title">Best Time to Visit</h2>
+        <div class="climate-grid">
+          <div class="climate-card peak">
+            <div class="climate-img" style="background-image: url(&quot;images/peek.jpg&quot;)"></div>
+            <div class="climate-body">
+              <div class="climate-icon">🌤️</div>
+              <h3>Oct – Feb</h3>
+              <p class="climate-tag">Peak Season</p>
+              <p>
+                Cool & pleasant, 15–25°C. Ideal for sightseeing and outdoor
+                activities.
+              </p>
+            </div>
+          </div>
+          <div class="climate-card shoulder">
+            <div class="climate-img" style="background-image: url(&quot;images/2f.jpg&quot;)"></div>
+            <div class="climate-body">
+              <div class="climate-icon">☁️</div>
+              <h3>Mar – May</h3>
+              <p class="climate-tag">Shoulder Season</p>
+              <p>
+                Warm to hot, 25–40°C. Visit early mornings; enjoy fewer
+                crowds.
+              </p>
+            </div>
+          </div>
+          <div class="climate-card monsoon">
+            <div class="climate-img" style="background-image: url(&quot;images/3.jpg&quot;)"></div>
+            <div class="climate-body">
+              <div class="climate-icon">🌧️</div>
+              <h3>Jun – Sep</h3>
+              <p class="climate-tag">Monsoon Season</p>
+              <p>
+                Hot & humid with occasional rain. Desert landscape turns lush
+                green.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-logo">🏰 Jodhpur Tourism</div>
+        <p>© 2025 Visit Jodhpur · All Rights Reserved</p>
+        <p class="footer-note">The Blue City of Rajasthan, India</p>
+      </footer>
+    </div>
+
+    <div class="page" id="page-places">
+      <div class="page-hero" style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1599661046289-e31897846e41?w=1600&q=80&quot;);
+          ">
+        <div class="ph-overlay"></div>
+        <div class="ph-content">
+          <h1>Visiting Places</h1>
+          <p>12 must-see destinations in the Blue City</p>
+        </div>
+      </div>
+      <section class="content-section">
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="nature">Nature</button>
+          <button class="filter-btn" data-filter="fort">
+            Forts & Palaces
+          </button>
+          <button class="filter-btn" data-filter="temple">Temples</button>
+          <button class="filter-btn" data-filter="market">Markets</button>
+        </div>
+        <div class="cards-grid" id="placesGrid"></div>
+      </section>
+      <footer class="site-footer">
+        <div class="footer-logo">Jodhpur Tourism</div>
+        <p>© 2025 Visit Jodhpur</p>
+      </footer>
+    </div>
+
+    <div class="page" id="page-historical">
+      <div class="page-hero" style="
+            background-image: url(&quot;images/Main.jpg&quot;);
+          ">
+        <div class="ph-overlay"></div>
+        <div class="ph-content">
+          <h1>Historical Places</h1>
+          <p>Centuries of Rajput glory carved in sandstone</p>
+        </div>
+      </div>
+      <section class="timeline-section content-section">
+        <h2 class="section-title">A Journey Through Time</h2>
+        <div class="timeline" id="timeline"></div>
+      </section>
+      <section class="content-section">
+        <h2 class="section-title">Historical Landmarks</h2>
+        <div class="cards-grid" id="historicalGrid"></div>
+      </section>
+      <footer class="site-footer">
+        <div class="footer-logo">🏰 Jodhpur Tourism</div>
+        <p>© 2025 Visit Jodhpur</p>
+      </footer>
+    </div>
+
+    <div class="page" id="page-restaurants">
+      <div class="page-hero" style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1600&q=80&quot;);
+          ">
+        <div class="ph-overlay"></div>
+        <div class="ph-content">
+          <h1>Restaurants & Cuisine</h1>
+          <p>Royal flavours of Marwari kitchens</p>
+        </div>
+      </div>
+      <section class="content-section">
+        <div class="cuisine-intro">
+          <h2 class="section-title">Taste of Jodhpur</h2>
+          <div class="dish-photo-strip">
+            <div class="dps-item" style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&q=75&quot;);
+                ">
+              <span>Dal Baati</span>
+            </div>
+            <div class="dps-item" style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=75&quot;);
+                ">
+              <span>Mirchi Bada</span>
+            </div>
+            <div class="dps-item" style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1574484284002-952d92456975?w=400&q=75&quot;);
+                ">
+              <span>Lassi</span>
+            </div>
+            <div class="dps-item" style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=75&quot;);
+                ">
+              <span>Rajasthani Thali</span>
+            </div>
+          </div>
+          <div class="dish-highlights">
+            <div class="dish-pill">🫓 Dal Baati Churma</div>
+            <div class="dish-pill">🌶️ Mirchi Bada</div>
+            <div class="dish-pill">🍛 Ker Sangri</div>
+            <div class="dish-pill">🍮 Mawa Kachori</div>
+            <div class="dish-pill">☕ Makhaniya Lassi</div>
+            <div class="dish-pill">🍬 Ghevar</div>
+          </div>
+        </div>
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="fine">Fine Dining</button>
+          <button class="filter-btn" data-filter="rooftop">Rooftop</button>
+          <button class="filter-btn" data-filter="street">Street Food</button>
+          <button class="filter-btn" data-filter="cafe">Café</button>
+        </div>
+        <div class="cards-grid" id="restaurantsGrid"></div>
+      </section>
+      <footer class="site-footer">
+        <div class="footer-logo">🏰 Jodhpur Tourism</div>
+        <p>© 2025 Visit Jodhpur</p>
+      </footer>
+    </div>
+
+    <div class="page" id="page-hotels">
+      <div class="page-hero" style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&q=80&quot;);
+          ">
+        <div class="ph-overlay"></div>
+        <div class="ph-content">
+          <h1>Where to Stay</h1>
+          <p>From palace suites to haveli homestays</p>
+        </div>
+      </div>
+      <section class="content-section">
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="luxury">Luxury</button>
+          <button class="filter-btn" data-filter="heritage">Heritage</button>
+          <button class="filter-btn" data-filter="budget">Budget</button>
+          <button class="filter-btn" data-filter="boutique">Boutique</button>
+        </div>
+        <div class="cards-grid" id="hotelsGrid"></div>
+      </section>
+      <footer class="site-footer">
+        <div class="footer-logo">🏰 Jodhpur Tourism</div>
+        <p>© 2025 Visit Jodhpur</p>
+      </footer>
+    </div>
+
+    <div class="page" id="page-culture">
+      <div class="page-hero" style="
+            background-image: url(&quot;images/culture.jpg&quot;);
+          ">
+        <div class="ph-overlay"></div>
+        <div class="ph-content">
+          <h1>Culture & Festivals</h1>
+          <p>Colors, music, and traditions of the Thar Desert</p>
+        </div>
+      </div>
+      <section class="content-section">
+        <h2 class="section-title">Festivals of Jodhpur</h2>
+        <div class="festivals-grid" id="festivalsGrid"></div>
+        <h2 class="section-title" style="margin-top: 3.5rem">
+          Arts & Crafts
+        </h2>
+        <div class="crafts-grid" id="craftsGrid"></div>
+      </section>
+      <footer class="site-footer">
+        <div class="footer-logo">🏰 Jodhpur Tourism</div>
+        <p>© 2025 Visit Jodhpur</p>
+      </footer>
+    </div>
+
+    <div class="page" id="page-travel">
+      <div class="page-hero" style="
+            background-image: url(&quot;images/bluelane.webp&quot;);
+          ">
+        <div class="ph-overlay"></div>
+        <div class="ph-content">
+          <h1>Travel Tips</h1>
+          <p>Everything you need to know before visiting</p>
+        </div>
+      </div>
+      <section class="content-section">
+        <div class="tips-grid">
+          <div class="tip-card">
+            <div class="tip-icon">✈️</div>
+            <h3>Getting There</h3>
+            <ul>
+              <li>
+                <strong>By Air:</strong> Jodhpur Airport (JDH) — direct
+                flights from Delhi, Mumbai, Jaipur
+              </li>
+              <li>
+                <strong>By Train:</strong> Jodhpur Junction — connected to
+                major Indian cities
+              </li>
+              <li>
+                <strong>By Road:</strong> NH-62, NH-112 — well-connected
+                highway network
+              </li>
+            </ul>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">🚖</div>
+            <h3>Getting Around</h3>
+            <ul>
+              <li>
+                Auto-rickshaws — best for short distances, negotiate fare
+                first
+              </li>
+              <li>Ola/Uber — available in the city</li>
+              <li>
+                Rental bikes & scooters — ideal for exploring independently
+              </li>
+              <li>Cycle rickshaws — for the old city bazaars</li>
+            </ul>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">💰</div>
+            <h3>Budget Guide</h3>
+            <ul>
+              <li>
+                <strong>Budget:</strong> ₹800–₹1,500/day (guesthouses, local
+                food)
+              </li>
+              <li><strong>Mid-range:</strong> ₹3,000–₹6,000/day</li>
+              <li>
+                <strong>Luxury:</strong> ₹10,000–₹50,000+/day (palace stays)
+              </li>
+              <li>Entry fees: ₹100–₹600 per major attraction</li>
+            </ul>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">🧳</div>
+            <h3>What to Pack</h3>
+            <ul>
+              <li>Light cotton clothes (Oct–Mar), loose linen (summers)</li>
+              <li>Comfortable walking shoes for fort exploration</li>
+              <li>Sunscreen, sunglasses, and a hat</li>
+              <li>Scarf/dupatta for temple visits</li>
+            </ul>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">🛡️</div>
+            <h3>Safety & Etiquette</h3>
+            <ul>
+              <li>Remove shoes before entering temples</li>
+              <li>Dress modestly at religious sites</li>
+              <li>Ask permission before photographing locals</li>
+              <li>Carry small change for markets and auto fares</li>
+            </ul>
+          </div>
+          <div class="tip-card">
+            <div class="tip-icon">📱</div>
+            <h3>Useful Info</h3>
+            <ul>
+              <li>
+                <strong>Language:</strong> Hindi, Marwari, English widely
+                understood
+              </li>
+              <li><strong>Currency:</strong> Indian Rupee (₹)</li>
+              <li><strong>Emergency:</strong> Police 100 | Ambulance 108</li>
+              <li><strong>Tourist Helpline:</strong> 1800-111-363</li>
+            </ul>
+          </div>
+        </div>
+        <div class="itinerary-section">
+          <h2 class="section-title">Suggested Itineraries</h2>
+          <div class="itinerary-tabs">
+            <button class="itin-tab active" data-days="2">2 Days</button>
+            <button class="itin-tab" data-days="4">4 Days</button>
+            <button class="itin-tab" data-days="7">7 Days</button>
+          </div>
+          <div class="itinerary-content" id="itineraryContent"></div>
+        </div>
+      </section>
+      <footer class="site-footer">
+        <div class="footer-logo">🏰 Jodhpur Tourism</div>
+        <p>© 2025 Visit Jodhpur</p>
+      </footer>
+    </div>
+  </div>
+
+  <div class="page-transition" id="pageTransition"></div>
+  <script src="app.js"></script>
+</body>
+
+</html>
