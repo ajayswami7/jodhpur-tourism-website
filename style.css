@@ -1187,6 +1187,21 @@ body {
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.3);
 }
+.footer-author{
+    margin-top:15px;
+    font-size:15px;
+}
+
+.footer-author a{
+    color:#ffb347;
+    text-decoration:none;
+    margin:0 8px;
+    transition:.3s;
+}
+
+.footer-author a:hover{
+    color:#ffffff;
+}
 
 /* ── MOBILE ── */
 @media (max-width: 768px) {
